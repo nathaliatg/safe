@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <script>
+      // Redirect GitHub Pages 404s back into the SPA
+      // Encodes the path into a query string that index.html decodes
+      var path = window.location.pathname.replace('/safe', '');
+      window.location.replace(
+        '/safe/?p=' + encodeURIComponent(path) + window.location.hash
+      );
+    </script>
+  </head>
+  <body></body>
+</html>
