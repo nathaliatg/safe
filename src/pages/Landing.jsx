@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import heroImage from '../assets/hero/marble.svg';
 import { Search, ArrowRight, CheckCircle2, AlertCircle, XCircle, FlaskConical, BookOpen, Upload } from 'lucide-react';
 import Reveal from '../components/Reveal';
@@ -262,10 +262,10 @@ export default function Landing() {
                     <h3 className="font-sans font-semibold text-neutral-900 mb-2">{title}</h3>
                     <p className="text-sm text-neutral-600 leading-relaxed">{desc}</p>
                   </div>
-                  <a href={link} className={`text-sm font-semibold ${color} flex items-center gap-1 mt-auto group`}>
+                  <Link to={link} className={`text-sm font-semibold ${color} flex items-center gap-1 mt-auto group`}>
                     {linkLabel}
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
-                  </a>
+                  </Link>
                 </div>
               </Reveal>
             ))}
@@ -285,18 +285,18 @@ export default function Landing() {
               No account needed. Just search and eat with confidence.
             </p>
             <div className="flex flex-row justify-center gap-3">
-              <a
-                href="/search"
+              <Link
+                to="/search"
                 className="px-6 py-3 bg-action-text hover:bg-action-text/90 text-white font-semibold rounded-3xl transition-all text-sm"
               >
                 Search a food
-              </a>
-              <a
-                href="/library"
+              </Link>
+              <Link
+                to="/library"
                 className="px-6 py-3 bg-white/50 hover:bg-white text-brand-700 font-semibold rounded-3xl border border-brand-300 transition-all text-sm"
               >
                 Browse library
-              </a>
+              </Link>
             </div>
           </div>
           {/* Bite ellipses — white, top-right corner, overlapping so no gap */}
