@@ -1119,18 +1119,6 @@
     "alternative_names": ["Fresh chives", "Spring onion (green tops only)"]
   },
   {
-    "id": "garlic-infused-oil",
-    "name": "Garlic-Infused Oil",
-    "emoji": "🫙",
-    "category": "condiments",
-    "status": "safe",
-    "fodmap_types": [],
-    "explanation": "Fructans (the FODMAP in garlic) are water-soluble, not oil-soluble — they stay in the garlic and do not transfer into the oil. Garlic-infused oil gives you the garlic flavour with none of the FODMAP load.",
-    "serving_note": "Safe at normal cooking amounts. Must be commercially produced or made by infusing whole garlic in oil and then removing the garlic completely — never use crushed garlic left in oil.",
-    "alternatives": [],
-    "alternative_names": []
-  },
-  {
     "id": "bbq-sauce",
     "name": "BBQ Sauce",
     "emoji": "🍖",

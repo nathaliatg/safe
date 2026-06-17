@@ -2,7 +2,7 @@ import Fuse from 'fuse.js';
 import foods from '../data/fodmap-foods.json';
 
 const fuse = new Fuse(foods, {
-  keys: ['name', 'category', 'fodmap_types', 'alternative_names'],
+  keys: ['name', 'fodmap_types'],
   threshold: 0.35,
   includeScore: true,
 });
@@ -10,7 +10,10 @@ const fuse = new Fuse(foods, {
 export function searchFoods(query) {
   if (!query || !query.trim()) return [];
   const results = fuse.search(query.trim());
-  return results.map(r => r.item);
+  const seen = new Set();
+  return results
+    .map(r => r.item)
+    .filter(item => seen.has(item.id) ? false : seen.add(item.id));
 }
 
 export function getFoodById(id) {
