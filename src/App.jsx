@@ -7,7 +7,7 @@ import Library from './pages/Library';
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/safe">
       <Layout>
         <Routes>
           <Route path="/" element={<Landing />} />
